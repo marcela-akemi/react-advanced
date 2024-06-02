@@ -7,6 +7,8 @@ const MajoracaoHistorico = () => {
   const [previousEntries, setPreviousEntries] = useState([]);
   const [filteredEntries, setFilteredEntries] = useState([]);
   const [searchQuery, setSearchQuery] = useState("");
+  const [currentPage, setCurrentPage] = useState(1);
+  const entriesPerPage = 10;
 
   useEffect(() => {
     const fetchPreviousEntries = async () => {
@@ -38,7 +40,17 @@ const MajoracaoHistorico = () => {
 
   const handleSearch = (event) => {
     setSearchQuery(event.target.value);
+    setCurrentPage(1);
   };
+
+  const indexOfLastEntry = currentPage * entriesPerPage;
+  const indexOfFistEntry = indexOfLastEntry - entriesPerPage;
+  const currentEntries = filteredEntries.slice(
+    indexOfFistEntry,
+    indexOfLastEntry
+  );
+
+  const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
   return (
     <div className="previous-entries-page">
@@ -59,7 +71,7 @@ const MajoracaoHistorico = () => {
           <div className="section-label">Data Majoração</div>
           <div></div>
         </div>
-        {filteredEntries.slice(0, 10).map((data, index) => (
+        {currentEntries.map((data, index) => (
           <div className="entry-container" key={index}>
             <div className="section-value">{data.cd_pasta}</div>
             <div className="section-value">{data.vl_alcada}</div>
@@ -72,6 +84,22 @@ const MajoracaoHistorico = () => {
             </div>
           </div>
         ))}
+      </div>
+      <div className="pagination">
+        {Array.from(
+          { length: Math.ceil(filteredEntries.length / entriesPerPage) },
+          (_, index) => (
+            <button
+              key={index + 1}
+              onClick={() => paginate(index + 1)}
+              className={`page-number ${
+                currentPage === index + 1 ? "active" : ""
+              }`}
+            >
+              {index + 1}
+            </button>
+          )
+        )}
       </div>
     </div>
   );

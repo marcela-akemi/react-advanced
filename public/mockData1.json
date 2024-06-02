@@ -1,13 +1,90 @@
 [
   {
     "id_majoracao": "",
-    "escritorio": "Skynet",
-    "cd_pasta": "sdsdsd",
-    "ds_alcada": "ddddsds",
-    "vl_alcada": "sdsdsdsd",
+    "escritorio": "Skynet - Neural Net-Based Artificial Intelligence",
+    "cd_pasta": "202409999",
+    "ds_alcada": "Alcada 1",
+    "vl_alcada": "3900,00",
     "vl_alcada_max": "3900,00",
-    "carteira": "sdsdd",
+    "carteira": "Carteira X",
     "data_majoracao": "2024-05-28",
+    "data_audiencia": ""
+  },
+  {
+    "id_majoracao": "",
+    "escritorio": "Umbrella Corporation",
+    "cd_pasta": "222200011",
+    "ds_alcada": "Alçada 5",
+    "vl_alcada": "665654",
+    "vl_alcada_max": "5000,01",
+    "carteira": "7777",
+    "data_majoracao": "2024-03-26",
+    "data_audiencia": ""
+  },
+  {
+    "id_majoracao": "",
+    "escritorio": "LexCorp",
+    "cd_pasta": "334405091",
+    "ds_alcada": "Alçada 2",
+    "vl_alcada": "665654",
+    "vl_alcada_max": "5000,01",
+    "carteira": "7777",
+    "data_majoracao": "2024-03-26",
+    "data_audiencia": ""
+  },
+  {
+    "id_majoracao": "",
+    "escritorio": "Red Ribbon",
+    "cd_pasta": "999203951",
+    "ds_alcada": "55555",
+    "vl_alcada": "665654",
+    "vl_alcada_max": "5000,01",
+    "carteira": "7777",
+    "data_majoracao": "2024-03-26",
+    "data_audiencia": ""
+  },
+  {
+    "id_majoracao": "",
+    "escritorio": "Weyland-Yutani Corp",
+    "cd_pasta": "262605129",
+    "ds_alcada": "55555",
+    "vl_alcada": "665654",
+    "vl_alcada_max": "5000,01",
+    "carteira": "7777",
+    "data_majoracao": "2024-03-26",
+    "data_audiencia": ""
+  },
+  {
+    "id_majoracao": "",
+    "escritorio": "OSCORP Industries",
+    "cd_pasta": "222333444",
+    "ds_alcada": "55555",
+    "vl_alcada": "665654",
+    "vl_alcada_max": "5000,01",
+    "carteira": "7777",
+    "data_majoracao": "2024-03-26",
+    "data_audiencia": ""
+  },
+  {
+    "id_majoracao": "",
+    "escritorio": "Umbrella Corporation",
+    "cd_pasta": "232323232",
+    "ds_alcada": "55555",
+    "vl_alcada": "665654",
+    "vl_alcada_max": "5000,01",
+    "carteira": "7777",
+    "data_majoracao": "2024-03-26",
+    "data_audiencia": ""
+  },
+  {
+    "id_majoracao": "",
+    "escritorio": "Stark Industries",
+    "cd_pasta": "987654321",
+    "ds_alcada": "55555",
+    "vl_alcada": "665654",
+    "vl_alcada_max": "5000,01",
+    "carteira": "7777",
+    "data_majoracao": "2024-03-26",
     "data_audiencia": ""
   },
   {
@@ -19,6 +96,39 @@
     "vl_alcada_max": "5000,01",
     "carteira": "7777",
     "data_majoracao": "2024-03-26",
+    "data_audiencia": ""
+  },
+  {
+    "id_majoracao": "",
+    "escritorio": "Abstergo Industries",
+    "cd_pasta": "00012934",
+    "ds_alcada": "55555",
+    "vl_alcada": "665654",
+    "vl_alcada_max": "5000,01",
+    "carteira": "7777",
+    "data_majoracao": "2024-03-26",
+    "data_audiencia": ""
+  },
+  {
+    "id_majoracao": "",
+    "escritorio": "Umbrella Corporation",
+    "cd_pasta": "2323232",
+    "ds_alcada": "55555",
+    "vl_alcada": "665654",
+    "vl_alcada_max": "5000,01",
+    "carteira": "7777",
+    "data_majoracao": "2024-03-26",
+    "data_audiencia": ""
+  },
+  {
+    "id_majoracao": "",
+    "escritorio": "Umbrella Corporation",
+    "cd_pasta": "99999999",
+    "ds_alcada": "55555",
+    "vl_alcada": "665654",
+    "vl_alcada_max": "5000,01",
+    "carteira": "7777",
+    "data_majoracao": "2024-01-26",
     "data_audiencia": ""
   }
 ]
