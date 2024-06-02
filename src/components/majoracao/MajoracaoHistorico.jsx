@@ -15,6 +15,7 @@ const MajoracaoHistorico = () => {
           "http://localhost:5000/load/majoracao-historico"
         );
         setPreviousEntries(response.data);
+        setFilteredEntries(response.data);
       } catch (error) {
         console.error("erro ao carregar dados", error);
       }
@@ -23,13 +24,20 @@ const MajoracaoHistorico = () => {
     fetchPreviousEntries();
   }, []);
 
+  useEffect(() => {
+    if (searchQuery === "") {
+      setFilteredEntries(previousEntries);
+    } else {
+      const query = searchQuery.toLowerCase();
+      const filtered = previousEntries.filter((data) =>
+        data.cd_pasta.toLowerCase().includes(query)
+      );
+      setFilteredEntries(filtered);
+    }
+  }, [searchQuery, previousEntries]);
+
   const handleSearch = (event) => {
-    const query = event.target.value.toLowerCase();
-    setSearchQuery(query);
-    const filtered = previousEntries.filter((data) =>
-      data.cd_pasta.toLowerCase().includes(query)
-    );
-    setFilteredEntries(filtered);
+    setSearchQuery(event.target.value);
   };
 
   return (
