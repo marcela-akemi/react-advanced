@@ -1,0 +1,26 @@
+[
+  {
+    "id": "1",
+    "cd_pasta": "222333444",
+    "carteira": "Carteira X",
+    "escritorio": "Umbrella Corporation",
+    "estrategia": "Acordo",
+    "orgao_legal": "STF",
+    "vl_alcada_max": "36000",
+    "data_audiencia": "2024-03-27",
+    "data_inclusao": "2024-04-17",
+    "month": "January"
+  },
+  {
+    "id": "2",
+    "cd_pasta": "444555666",
+    "carteira": "Carteira Y",
+    "escritorio": "Wayland Corp",
+    "estrategia": "Defesa",
+    "orgao_legal": "CEJUSC",
+    "vl_alcada_max": "49000",
+    "data_audiencia": "2024-02-12",
+    "data_inclusao": "2024-03-21",
+    "month": "April"
+  }
+]

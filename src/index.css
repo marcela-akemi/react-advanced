@@ -1,0 +1,54 @@
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 16px;
+}
+
+.top-menu {
+  background-color: #ff4400;
+  font-size: 24px;
+  font-style: bold;
+  overflow: hidden;
+}
+
+.top-menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.top-menu li {
+  float: left;
+}
+
+.top-menu li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.top-menu li a:hover {
+  background-color: #3c3c3c;
+  color: rgb(255, 255, 255);
+}
+
+.top-menu .active {
+  background-color: #2d2d2d;
+}
+.div-form {
+  width: 800px;
+  position: absolute;
+  left: 5%;
+  padding: 10px;
+  border-radius: 15px 15px;
+  border: 1px solid;
+  border-color: #cbcbcb;
+  background-color: #ffffff;
+
+  column-count: 2;
+}
+.grid-item {
+  border: 0px solid black;
+  height: 40px;
+}

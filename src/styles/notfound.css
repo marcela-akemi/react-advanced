@@ -1,0 +1,13 @@
+.not-found-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+}
+
+.not-found-message {
+  font-size: 3em;
+  font-weight: bold;
+  color: #333;
+}
