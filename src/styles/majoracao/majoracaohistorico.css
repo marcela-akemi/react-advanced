@@ -59,3 +59,15 @@
 .details-button:hover {
   background-color: orangered;
 }
+.search-container {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.search-container input {
+  width: 200px;
+  padding: 5px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}

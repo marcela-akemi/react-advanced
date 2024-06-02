@@ -16,12 +16,14 @@ const MajoracaoItem = () => {
         <div className="section-content">
           <div className="section-label">Pasta: </div>
           <div className="section-value">{data.cd_pasta}</div>
-          <div className="section-label">Valor Alçada Máxima: </div>
-          <div className="section-value">{data.vl_alcada_max}</div>
           <div className="section-label">Carteira: </div>
           <div className="section-value">{data.carteira}</div>
           <div className="section-label">Escritório: </div>
           <div className="section-value">{data.escritorio}</div>
+          <div className="section-label">Valor Alçada Máxima: </div>
+          <div className="section-value">{data.vl_alcada_max}</div>
+          <div className="section-label">Data da última majoração</div>
+          <div className="section-value">{data.data_majoracao}</div>
         </div>
       </div>
     </div>

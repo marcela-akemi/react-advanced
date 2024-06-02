@@ -5,6 +5,8 @@ import "../../styles/majoracao/majoracaohistorico.css";
 
 const MajoracaoHistorico = () => {
   const [previousEntries, setPreviousEntries] = useState([]);
+  const [filteredEntries, setFilteredEntries] = useState([]);
+  const [searchQuery, setSearchQuery] = useState("");
 
   useEffect(() => {
     const fetchPreviousEntries = async () => {
@@ -21,9 +23,26 @@ const MajoracaoHistorico = () => {
     fetchPreviousEntries();
   }, []);
 
+  const handleSearch = (event) => {
+    const query = event.target.value.toLowerCase();
+    setSearchQuery(query);
+    const filtered = previousEntries.filter((data) =>
+      data.cd_pasta.toLowerCase().includes(query)
+    );
+    setFilteredEntries(filtered);
+  };
+
   return (
     <div className="previous-entries-page">
       <h1>Histórico</h1>
+      <div className="search-container">
+        <input
+          type="text"
+          value={searchQuery}
+          onChange={handleSearch}
+          placeholder="Pesquisar por PASTA"
+        ></input>
+      </div>
       <div className="previous-entries-container">
         <div className="entry-container header-row">
           <div className="section-label">Pasta</div>
@@ -32,7 +51,7 @@ const MajoracaoHistorico = () => {
           <div className="section-label">Data Majoração</div>
           <div></div>
         </div>
-        {previousEntries.map((data, index) => (
+        {filteredEntries.slice(0, 10).map((data, index) => (
           <div className="entry-container" key={index}>
             <div className="section-value">{data.cd_pasta}</div>
             <div className="section-value">{data.vl_alcada}</div>
