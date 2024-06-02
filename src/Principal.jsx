@@ -8,7 +8,7 @@ const ButtonsPage = () => {
     <div className="buttons-page">
       <SearchBox />
       <div className="buttons-container">
-        <Link to="/3as">
+        <Link to="/load/3as-historico">
           <button className="custom-button">3AS - Acordo Como Serviço</button>
         </Link>
         <Link to="/load/majoracao-historico">

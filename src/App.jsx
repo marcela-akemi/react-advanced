@@ -12,6 +12,7 @@ import AcordoComoServicoItem from "./components/3as/AcordoComoServicoItem";
 import MajoracaoItem from "./components/majoracao/MajoracaoItem";
 import CampanhasItem from "./components/campanhas/CampanhasItem";
 import MajoracaoHistorico from "./components/majoracao/MajoracaoHistorico";
+import AcordoComoServicoHistorico from "./components/3as/AcordoComoServicoHistorico";
 
 const App = () => {
   return (
@@ -37,6 +38,10 @@ const App = () => {
             <Route
               path="/load/majoracao-historico"
               element={<MajoracaoHistorico />}
+            />
+            <Route
+              path="/load/3as-historico"
+              element={<AcordoComoServicoHistorico />}
             />
             <Route
               path="/campanhas-item/:cd_pasta"

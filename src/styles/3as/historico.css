@@ -1,8 +1,3 @@
-.page-section {
-  width: 80%;
-  margin: 100px auto 0;
-}
-
 .previous-entry-page {
   padding: 20px;
 }
@@ -15,7 +10,7 @@
 
 .entry-container {
   display: grid;
-  grid-template-columns: 0.8fr 2.5fr 1fr 0.8fr 0.8fr 1fr 0.9fr;
+  grid-template-columns: 1fr 1000px 1fr 1fr 1fr 1fr 1fr;
   align-items: center;
   gap: 5px;
   border-bottom: 1px solid #ccc;
@@ -84,28 +79,4 @@
   border: none;
   border-radius: 5px;
   cursor: pointer;
-}
-
-.pagination {
-  display: flex;
-  justify-content: center;
-  margin-top: 20px;
-}
-.page-number {
-  background-color: #f0f0f0;
-  border: 1px solid #ccc;
-  padding: 10px;
-  margin: 0 5px;
-  cursor: pointer;
-  border-radius: 5px;
-}
-
-.page-number.active {
-  background-color: #404040;
-  color: #fff;
-}
-
-.page-number:hover {
-  background-color: rgb(255, 111, 0);
-  color: #fff;
 }

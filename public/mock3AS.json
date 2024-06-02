@@ -1,0 +1,113 @@
+[
+  {
+    "id_3as": "",
+    "cd_pasta": "90023056",
+    "escritorio": "Umbrella Corporation",
+    "carteira": "Pistaccio",
+    "orgao_legal": "JEC",
+    "estrategia": "Acordo",
+    "acao": "Incluir",
+    "vl_alcada": 36950.31,
+    "ds_alcada": "Alçada 5",
+    "dt_inclusao": "2024-04-18"
+  },
+  {
+    "id_3as": "",
+    "cd_pasta": "30117093",
+    "escritorio": "Skynet - Artificial Intelligence Research",
+    "carteira": "Amendoim",
+    "vl_alcada": 11543.86,
+    "ds_alcada": "Alçada 1",
+    "dt_inclusao": "2024-01-27"
+  },
+  {
+    "id_3as": "",
+    "cd_pasta": "49134065",
+    "escritorio": "Wayland-Yutani Corp",
+    "carteira": "Nozes",
+    "vl_alcada": 9873.02,
+    "ds_alcada": "Alçada 3",
+    "dt_inclusao": "2024-03-09"
+  },
+  {
+    "id_3as": "",
+    "cd_pasta": "10213406",
+    "escritorio": "Stark Industries",
+    "carteira": "Cajú",
+    "vl_alcada": 12309.85,
+    "ds_alcada": "Alçada 5",
+    "dt_inclusao": "2024-04-23"
+  },
+  {
+    "id_3as": "",
+    "cd_pasta": "61253711",
+    "escritorio": "Umbrella Corporation",
+    "carteira": "Pinhão",
+    "vl_alcada": 7223.22,
+    "ds_alcada": "Alçada 4",
+    "dt_inclusao": "2024-02-11"
+  },
+  {
+    "id_3as": "",
+    "cd_pasta": "76445619",
+    "escritorio": "LexCorp",
+    "carteira": "Pistaccio",
+    "vl_alcada": 10313.66,
+    "ds_alcada": "Alçada 4",
+    "dt_inclusao": "2024-05-21"
+  },
+  {
+    "id_3as": "",
+    "cd_pasta": "32416019",
+    "escritorio": "Skynet - Artificial Intelligence Research",
+    "carteira": "Amendoim",
+    "vl_alcada": 6814.99,
+    "ds_alcada": "Alçada 3",
+    "dt_inclusao": "2024-02-06"
+  },
+  {
+    "id_3as": "",
+    "cd_pasta": "98416619",
+    "escritorio": "Vault-Tec",
+    "carteira": "Cajú",
+    "vl_alcada": 2217.39,
+    "ds_alcada": "Alçada 1",
+    "dt_inclusao": "2024-03-01"
+  },
+  {
+    "id_3as": "",
+    "cd_pasta": "22415399",
+    "escritorio": "Abstergo Industries",
+    "carteira": "Pistaccio",
+    "vl_alcada": 5313.66,
+    "ds_alcada": "Alçada 2",
+    "dt_inclusao": "2024-05-10"
+  },
+  {
+    "id_3as": "",
+    "cd_pasta": "90241492",
+    "escritorio": "Wayne Enterprises Inc.",
+    "carteira": "Nozes",
+    "vl_alcada": 10445.38,
+    "ds_alcada": "Alçada 5",
+    "dt_inclusao": "2024-01-31"
+  },
+  {
+    "id_3as": "",
+    "cd_pasta": "8840103",
+    "escritorio": "OSCORP",
+    "carteira": "Cajú",
+    "vl_alcada": 16945.56,
+    "ds_alcada": "Alçada 5",
+    "dt_inclusao": "2024-05-12"
+  },
+  {
+    "id_3as": "",
+    "cd_pasta": "11246093",
+    "escritorio": "Wayland-Yutani Corp",
+    "carteira": "Pinhão",
+    "vl_alcada": 8545.94,
+    "ds_alcada": "Alçada 3",
+    "dt_inclusao": "2024-02-29"
+  }
+]
