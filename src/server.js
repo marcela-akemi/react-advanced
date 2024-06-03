@@ -27,6 +27,22 @@ const saveData = (filePath, data) => {
     }
   });
 };
+app.get("/load/campanhas-historico", (req, res) => {
+  const filePath = path.join(__dirname, "../public", "mockCampanhas.json");
+  fs.readFile(filePath, "utf8", (err, data) => {
+    if (err) {
+      console.error("erro ao ler o arquivo", err);
+      return res.status(500).json({ message: "internal server error" });
+    }
+    try {
+      const jsonData = JSON.parse(data);
+      res.status(200).json(jsonData);
+    } catch (parseError) {
+      console.error("error parsing json", parseError);
+      return res.status(500).json({ message: "internal server error" });
+    }
+  });
+});
 
 app.get("/load/3as-historico", (req, res) => {
   const filePath = path.join(__dirname, "../public", "mock3AS.json");

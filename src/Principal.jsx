@@ -14,7 +14,7 @@ const ButtonsPage = () => {
         <Link to="/load/majoracao-historico">
           <button className="custom-button">Majoração Automática</button>
         </Link>
-        <Link to="/campanhas">
+        <Link to="/load/campanhas-historico">
           <button className="custom-button">Campanhas</button>
         </Link>
       </div>
