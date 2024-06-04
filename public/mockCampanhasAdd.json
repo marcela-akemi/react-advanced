@@ -1,0 +1,63 @@
+[
+  {
+    "id_majoracao": "",
+    "cd_pasta": "",
+    "ds_alcada": "",
+    "vl_alcada": "",
+    "vl_alcada_max": "",
+    "carteira": "",
+    "data_majoracao": "",
+    "data_audiencia": ""
+  },
+  {
+    "id_majoracao": "",
+    "cd_pasta": "",
+    "ds_alcada": "",
+    "vl_alcada": "",
+    "vl_alcada_max": "",
+    "carteira": "",
+    "data_majoracao": "",
+    "data_audiencia": ""
+  },
+  {
+    "id_majoracao": "",
+    "cd_pasta": "",
+    "ds_alcada": "",
+    "vl_alcada": "",
+    "vl_alcada_max": "",
+    "carteira": "",
+    "data_majoracao": "",
+    "data_audiencia": ""
+  },
+  {
+    "id_majoracao": "",
+    "cd_pasta": "",
+    "ds_alcada": "",
+    "vl_alcada": "",
+    "vl_alcada_max": "",
+    "carteira": "",
+    "data_majoracao": "",
+    "data_audiencia": ""
+  },
+  {
+    "id_majoracao": "",
+    "cd_pasta": "",
+    "ds_alcada": "",
+    "vl_alcada": "",
+    "vl_alcada_max": "",
+    "carteira": "",
+    "data_majoracao": "",
+    "data_audiencia": ""
+  },
+  {
+    "campanha_nome": "",
+    "campanha_objetivo": "",
+    "filtro1": "",
+    "filtro2": "",
+    "data_vigencia_inicio": "",
+    "data_vigencia_termino": "",
+    "isActive1": false,
+    "isActive2": false,
+    "isActive3": false
+  }
+]

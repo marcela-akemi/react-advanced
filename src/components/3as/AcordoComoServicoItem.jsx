@@ -17,8 +17,8 @@ const AcordoComoServicoItem = () => {
       <div className="section-container-item">
         <div className="section-content-item">
           <div className="section-label-item">Pasta: </div>
-          <div className="section-value-item">{data.cd_pasta}</div>
           <div className="section-label-item">Carteira: </div>
+          <div className="section-value-item">{data.cd_pasta}</div>
           <div className="section-value-item">{data.carteira}</div>
           <div className="section-label-item">Escritório: </div>
           <div className="section-value-item">{data.escritorio}</div>

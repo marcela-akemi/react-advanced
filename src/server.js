@@ -91,7 +91,20 @@ app.post("/save/majoracao", (req, res) => {
     res.status(200).json({ message: "dados salvos com sucesso." });
   });
 });
-
+app.post("/save/campanhas", (req, res) => {
+  const filePath = path.join(__dirname, "../public", "mockCampanhasAdd.json");
+  console.log(__dirname);
+  fs.readFile(filePath, "utf8", (err, fileData) => {
+    if (err) {
+      console.error("erro ao ler o arquivo", err);
+      return res.status(500).json({ message: "internal server error" });
+    }
+    const data = JSON.parse(fileData || "[]");
+    data.push(req.body);
+    saveData(filePath, data);
+    res.status(200).json({ message: "dados salvos com sucesso." });
+  });
+});
 app.listen(PORT, () => {
   console.log(`servidor rodando em http://localhost:${PORT}`);
 });

@@ -66,6 +66,9 @@ const CampanhasHistorico = () => {
           onChange={handleSearch}
           placeholder="Pesquisar por PASTA, ESCRITORIO ou CARTEIRA"
         ></input>
+        <Link to="/campanhas">
+          <button>Adicionar</button>
+        </Link>
       </div>
       <div className="previous-entries-container-campanhas">
         <div className="entries-container-campanhas header-row">
