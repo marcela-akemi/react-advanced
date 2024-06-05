@@ -67,3 +67,32 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+.uploaded-data-container {
+  margin-top: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.uploaded-data-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+}
+
+.uploaded-data-header,
+.uploaded.data-row {
+  display: contents;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.uploaded-data-header span,
+.uploaded.data-row span {
+  border-bottom: 1px solid #ccc;
+  padding: 5px;
+}
+
+.uploaded-data-header span {
+  font-weight: bold;
+}

@@ -1,6 +1,9 @@
 // Page1.jsx
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import axios from "axios";
+import { render } from "react-dom";
+import ReactDOM from "react-dom";
+
 import "../../styles/addnew.css";
 
 const Campanhas = () => {
@@ -16,8 +19,12 @@ const Campanhas = () => {
     isActive3: false,
   });
 
+  const [isUploadEnabled, setIsUploadEnabled] = useState(false);
+  const [uploadedItems, setUploadedItems] = useState([]);
+  const fileInuptRef = useRef(null);
+
   const handleChange = (e) => {
-    const { name, value } = e.target;
+    const { name, value, type, checked } = e.target;
     setFormData({ ...formData, [name]: type === "checkbox" ? checked : value });
   };
 
@@ -28,7 +35,7 @@ const Campanhas = () => {
       await axios.post("http://localhost:5000/save/campanhas", formData);
 
       alert("dados salvos com sucesso");
-
+      setIsUploadEnabled(true);
       setFormData({
         campanha_nome: "",
         campanha_objetivo: "",
@@ -44,39 +51,44 @@ const Campanhas = () => {
       console.error("Erro ao salvaro dados: ", error);
     }
   };
-  // const validarDatasVigencia = () => {
-  //   const validacaoError = {};
-  //   const hoje = new Date().toISOString.split("T")[0];
 
-  //   if (!formData.campanha_nome) {
-  //     validacaoError.campanha_nome = "Favor inserir nome da CAMPANHA";
-  //   }
-  //   if (!formData.data_vigencia_inicio) {
-  //     validacaoError.data_vigencia_inicio =
-  //       "É necessário inserir uma data de vigência";
-  //   } else if (formData.data_vigencia_inicio < hoje) {
-  //     validacaoError.data_vigencia_inicio =
-  //       "Data de início não pode ser anterior ao dia de hoje.";
-  //   }
-  //   if (!formData.data_vigencia_termino) {
-  //     validacaoError.data_vigencia_termino =
-  //       "É necessário inserir a data de término da vigência";
-  //   } else if (formData.data_vigencia_termino < hoje) {
-  //     validacaoError.data_vigencia_termino =
-  //       "A data de término da vigência não pode ser anterior ao dia de hoje";
-  //   } else if (formData.data_vigencia_termino < formData.data_vigencia_inicio) {
-  //     validacaoError.data_vigencia_termino =
-  //       "A data de término não pode ser anterior a data de início.";
-  //   }
+  const handleFileUpload = (e) => {
+    const file = e.target.files[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onload = (event) => {
+        const csvData = event.target.result;
+        const items = csvData.split("\n").map((item) => item.trim());
+        const jsonData = items.map((row, index) => ({
+          cd_pasta: row.trim(),
+          status: 1,
+          dt_inclusao: new Date().toISOString(),
+        }));
+        setUploadedItems(jsonData);
+      };
 
-  //   setFormErrors(validacaoError);
-  //   return Object.keys(validacaoError).length === 0;
-  // };
+      reader.readAsText(file);
+    }
+  };
+
+  const handleUploadSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const response = await axios.post(
+        "http://localhost:5000/save/campanhas-pastas",
+        uploadedItems
+      );
+      alert("csv lido com sucesso");
+      setUploadedItems;
+    } catch (error) {
+      console.error("erro ao consumir CSV", error);
+    }
+  };
 
   return (
     <div>
       <div className="add-entry-container">
-        <h2>Adicionar novo registro</h2>
+        <h2>Adicionar nsovo registro</h2>
         <form onSubmit={handleSubmit} className="add-entry-form">
           <div className="form-column">
             <div className="form-group">
@@ -84,13 +96,13 @@ const Campanhas = () => {
               <label>Objetivo da Registro</label>
               <input
                 type="text"
-                name="campanha-nome"
+                name="campanha_nome"
                 value={formData.campanha_nome}
                 onChange={handleChange}
               />
               <input
                 type="text"
-                name="campanha-objetivo"
+                name="campanha_objetivo"
                 value={formData.campanha_objetivo}
                 onChange={handleChange}
               />
@@ -126,13 +138,13 @@ const Campanhas = () => {
               <label>Data Vigência Término</label>
               <input
                 type="date"
-                name="data-vigencia-inicio"
+                name="data_vigencia_inicio"
                 value={formData.data_vigencia_inicio}
                 onChange={handleChange}
               />
               <input
                 type="date"
-                name="data-vigencia-termino"
+                name="data_vigencia_termino"
                 value={formData.data_vigencia_termino}
                 onChange={handleChange}
               />
@@ -161,20 +173,52 @@ const Campanhas = () => {
               <label>Checkbox 3</label>
               <input
                 type="checkbox"
-                name="isActive2"
+                name="isActive3"
                 checked={formData.isActive3}
                 onChange={handleChange}
               />
             </div>
+            <div className="form-actions">
+              <button type="submit" onClick={handleSubmit}>
+                Enviar
+              </button>
+
+              <button type="button">Back</button>
+            </div>
           </div>
         </form>
-      </div>
-      <div className="form-actions">
-        <button type="submit" onClick={handleSubmit}>
-          Enviar
-        </button>
 
-        <button type="button">Back</button>
+        {isUploadEnabled && (
+          <form onSubmit={handleUploadSubmit} className="upload-form">
+            <div className="file-upload-container">
+              <h3>Upload CSV file</h3>
+              <input
+                type="file"
+                ref={fileInuptRef}
+                accept=".csv"
+                onChange={handleFileUpload}
+              />
+              <button type="submit">Upload</button>
+            </div>
+            <div className="uploaded-data-container">
+              <h3>Uploaded items</h3>
+              <div className="uploaded-data-grid">
+                <div className="uploaded-data-header">
+                  <span>Pasta</span>
+                  <span>Status</span>
+                  <span>Data Inclusão</span>
+                </div>
+                {uploadedItems.map((item, index) => (
+                  <div className="uploaded-data-row" key={index}>
+                    <span>{item.cd_pasta}</span>
+                    <span>{item.status}</span>
+                    <span>{new Date(item.dt_inclusao).toLocaleString()}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </form>
+        )}
       </div>
     </div>
   );
