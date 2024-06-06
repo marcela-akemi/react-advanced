@@ -123,6 +123,73 @@ app.post("/save/campanhas-pastas", (req, res) => {
     res.status(200).json({ message: "dados salvos com sucesso." });
   });
 });
+
+/**PRICE ITEMS */
+
+app.get("/load/price-history-item", (req, res) => {
+  const cd_pasta = req.query.cd_pasta;
+  const page = parseInt(req.query.page) || 1;
+  const limit = parseInt(req.query.limit) || 10;
+
+  const filePath = path.join(
+    __dirname,
+    "../public",
+    "mockDataPriceItemHistory.json"
+  );
+  fs.readFile(filePath, "utf8", (err, data) => {
+    if (err) {
+      console.error("erro ao ler o arquivo", err);
+      res.status(500).json({ message: "internal server error" });
+      return;
+    }
+
+    const mockData = JSON.parse(data);
+
+    const filteredData = mockData.filter((item) => item.cd_pasta === cd_pasta);
+
+    const startIndex = (page - 1) * limit;
+    const endIndex = page * limit;
+    const paginatedData = filteredData.slice(startIndex, endIndex);
+
+    res.json({ page, limit, total: filteredData.length, data: paginatedData });
+    console.log("ok");
+  });
+});
+
+app.get("/load/details/:id_field", (req, res) => {
+  const { id_field } = req.params;
+
+  const filePath = path.join(
+    __dirname,
+    "../public",
+    "mockDataPriceDetailItem.json"
+  );
+  // Read mock data from file
+  fs.readFile(filePath, "utf8", (err, data) => {
+    if (err) {
+      res.status(500).json({ error: "Internal Server Error!!" });
+      return;
+    }
+
+    try {
+      const mockData = JSON.parse(data);
+      console.log("leitura de arquivo ok");
+      const item = mockData.find((item) => String(item.id_field) === id_field);
+      console.log(id_field);
+
+      if (item) {
+        res.json(item);
+        console.log("tem item no arquivo?");
+      } else {
+        res.status(404).json({ error: "Item not found" });
+        console.log("nada foi encontrado");
+      }
+    } catch (error) {
+      res.status(500).json({ error: "Error parsing mock data" });
+    }
+  });
+});
+
 app.listen(PORT, () => {
   console.log(`servidor rodando em http://localhost:${PORT}`);
 });

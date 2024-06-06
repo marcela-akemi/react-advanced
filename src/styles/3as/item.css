@@ -58,3 +58,109 @@
 .back-button:hover {
   background-color: rgb(255, 111, 0);
 }
+
+.pagination-controls {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.pagination-button {
+  padding: 10px 20px;
+  margin: 0 10px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.pagination-button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+.pagination-button:hover:not(:disabled) {
+  background-color: #0056b3;
+}
+
+.page-section-item {
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  margin: 20px 0;
+}
+
+.section-container-item {
+  margin-bottom: 20px;
+}
+
+.section-content-item {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.section-label-item,
+.section-value-item {
+  flex-basis: calc(50% - 10px);
+  margin: 5px 0;
+}
+
+.api-data-container {
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.api-data-header,
+.api-data-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+
+.api-data-header {
+  font-weight: bold;
+  background-color: #f9f9f9;
+  border-bottom: 2px solid #ccc;
+}
+
+.api-data-row {
+  align-items: center;
+  border-bottom: 1px solid #eee;
+}
+
+.api-data-column {
+  flex: 1;
+  padding: 0 10px;
+}
+
+.more-button {
+  padding: 5px 10px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.more-button:hover {
+  background-color: #0056b3;
+}
+
+.back-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.back-button:hover {
+  background-color: #0056b3;
+}

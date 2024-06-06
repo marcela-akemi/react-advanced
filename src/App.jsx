@@ -14,6 +14,7 @@ import CampanhasItem from "./components/campanhas/CampanhasItem";
 import MajoracaoHistorico from "./components/majoracao/MajoracaoHistorico";
 import AcordoComoServicoHistorico from "./components/3as/AcordoComoServicoHistorico";
 import CampanhasHistorico from "./components/campanhas/CampanhasHistorico";
+import PriceDetailsItem from "./components/pricing/PriceDetailsItem";
 
 const App = () => {
   return (
@@ -51,6 +52,10 @@ const App = () => {
             <Route
               path="/campanhas-item/:cd_pasta"
               element={<CampanhasItem />}
+            />
+            <Route
+              path="/details/price-item-details/:id_field"
+              element={<PriceDetailsItem />}
             />
           </Routes>
         </div>

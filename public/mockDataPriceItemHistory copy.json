@@ -1,0 +1,608 @@
+[
+  {
+    "cd_pasta": "90023056",
+    "id_field": 1,
+    "someField1": "Asus Zenfone 3 Laser ZC551KL",
+    "someField2": "Asus",
+    "dt_created": "11/21/2023"
+  },
+  {
+    "cd_pasta": "90023056",
+    "id_field": 2,
+    "someField1": "Micromax Selfie 2 Q4311",
+    "someField2": "Micromax",
+    "dt_created": "12/28/2023"
+  },
+  {
+    "id_field": 3,
+    "cd_pasta": "90023056",
+    "someField1": "ZTE Open",
+    "someField2": "ZTE",
+    "dt_created": "11/18/2023"
+  },
+  {
+    "id_field": 4,
+    "cd_pasta": "90023056",
+    "someField1": "Pantech Q80",
+    "someField2": "Pantech",
+    "dt_created": "4/10/2024"
+  },
+  {
+    "id_field": 5,
+    "cd_pasta": "90023056",
+    "someField1": "Nokia Lumia 630 Dual SIM",
+    "someField2": "Nokia",
+    "dt_created": "7/13/2023"
+  },
+  {
+    "id_field": 6,
+    "cd_pasta": "90023056",
+    "someField1": "Samsung X630",
+    "someField2": "Samsung",
+    "dt_created": "9/12/2023"
+  },
+  {
+    "id_field": 7,
+    "someField1": "Wiko Fever SE",
+    "someField2": "Wiko",
+    "dt_created": "4/2/2024"
+  },
+  {
+    "id_field": 8,
+    "someField1": "Samsung Galaxy Tab CDMA P100",
+    "someField2": "Samsung",
+    "dt_created": "3/1/2024"
+  },
+  {
+    "id_field": 9,
+    "someField1": "Unnecto Tap",
+    "someField2": "Unnecto",
+    "dt_created": "7/29/2023"
+  },
+  {
+    "id_field": 10,
+    "someField1": "Huawei MediaPad 7 Vogue",
+    "someField2": "Huawei",
+    "dt_created": "7/7/2023"
+  },
+  {
+    "id_field": 11,
+    "someField1": "alcatel GO Watch",
+    "someField2": "alcatel",
+    "dt_created": "9/13/2023"
+  },
+  {
+    "id_field": 12,
+    "someField1": "Chea A90",
+    "someField2": "Chea",
+    "dt_created": "3/20/2024"
+  },
+  {
+    "id_field": 13,
+    "someField1": "Ericsson A2618",
+    "someField2": "Ericsson",
+    "dt_created": "11/14/2023"
+  },
+  {
+    "id_field": 14,
+    "someField1": "Philips Savvy DB",
+    "someField2": "Philips",
+    "dt_created": "12/13/2023"
+  },
+  {
+    "id_field": 15,
+    "someField1": "Infinix Hot S",
+    "someField2": "Infinix",
+    "dt_created": "1/31/2024"
+  },
+  {
+    "id_field": 16,
+    "someField1": "Sony Xperia E dual",
+    "someField2": "Sony",
+    "dt_created": "9/17/2023"
+  },
+  {
+    "id_field": 17,
+    "someField1": "Lenovo Z5 Pro",
+    "someField2": "Lenovo",
+    "dt_created": "10/7/2023"
+  },
+  {
+    "id_field": 18,
+    "someField1": "Samsung Galaxy J2 (2016)",
+    "someField2": "Samsung",
+    "dt_created": "10/9/2023"
+  },
+  {
+    "id_field": 19,
+    "someField1": "HTC U11 Eyes",
+    "someField2": "HTC",
+    "dt_created": "3/14/2024"
+  },
+  {
+    "id_field": 20,
+    "someField1": "Lenovo Tab P11 Pro",
+    "someField2": "Lenovo",
+    "dt_created": "9/11/2023"
+  },
+  {
+    "id_field": 21,
+    "someField1": "Samsung i450",
+    "someField2": "Samsung",
+    "dt_created": "3/23/2024"
+  },
+  {
+    "id_field": 22,
+    "someField1": "Huawei Ascend G312",
+    "someField2": "Huawei",
+    "dt_created": "3/14/2024"
+  },
+  {
+    "id_field": 23,
+    "someField1": "alcatel OT 300",
+    "someField2": "alcatel",
+    "dt_created": "11/22/2023"
+  },
+  {
+    "id_field": 24,
+    "someField1": "Philips Xenium 9@9d",
+    "someField2": "Philips",
+    "dt_created": "4/1/2024"
+  },
+  {
+    "id_field": 25,
+    "someField1": "Energizer Power Max P8100S",
+    "someField2": "Energizer",
+    "dt_created": "2/5/2024"
+  },
+  {
+    "id_field": 26,
+    "someField1": "Vodafone 553",
+    "someField2": "Vodafone",
+    "dt_created": "4/6/2024"
+  },
+  {
+    "id_field": 27,
+    "someField1": "Acer Liquid E600",
+    "someField2": "Acer",
+    "dt_created": "7/5/2023"
+  },
+  {
+    "id_field": 28,
+    "someField1": "Acer beTouch E200",
+    "someField2": "Acer",
+    "dt_created": "9/14/2023"
+  },
+  {
+    "id_field": 29,
+    "someField1": "alcatel OT-799 Play",
+    "someField2": "alcatel",
+    "dt_created": "1/29/2024"
+  },
+  {
+    "id_field": 30,
+    "someField1": "Sony Xperia XZ",
+    "someField2": "Sony",
+    "dt_created": "8/23/2023"
+  },
+  {
+    "id_field": 31,
+    "someField1": "Philips S396",
+    "someField2": "Philips",
+    "dt_created": "9/19/2023"
+  },
+  {
+    "id_field": 32,
+    "someField1": "Acer Iconia Tab A101",
+    "someField2": "Acer",
+    "dt_created": "7/23/2023"
+  },
+  {
+    "id_field": 33,
+    "someField1": "vivo X5Pro",
+    "someField2": "vivo",
+    "dt_created": "12/30/2023"
+  },
+  {
+    "id_field": 34,
+    "someField1": "Samsung F210",
+    "someField2": "Samsung",
+    "dt_created": "6/12/2023"
+  },
+  {
+    "id_field": 35,
+    "someField1": "Samsung G3812B Galaxy S3 Slim",
+    "someField2": "Samsung",
+    "dt_created": "7/6/2023"
+  },
+  {
+    "id_field": 36,
+    "someField1": "Mitsubishi M342i",
+    "someField2": "Mitsubishi",
+    "dt_created": "5/8/2024"
+  },
+  {
+    "id_field": 37,
+    "someField1": "Micromax A80",
+    "someField2": "Micromax",
+    "dt_created": "6/13/2023"
+  },
+  {
+    "id_field": 38,
+    "someField1": "Plum Trigger Plus III",
+    "someField2": "Plum",
+    "dt_created": "8/23/2023"
+  },
+  {
+    "id_field": 39,
+    "someField1": "HTC HD7S",
+    "someField2": "HTC",
+    "dt_created": "10/30/2023"
+  },
+  {
+    "id_field": 40,
+    "someField1": "Nokia Lumia 900",
+    "someField2": "Nokia",
+    "dt_created": "2/22/2024"
+  },
+  {
+    "id_field": 41,
+    "someField1": "Motorola E895",
+    "someField2": "Motorola",
+    "dt_created": "5/27/2024"
+  },
+  {
+    "id_field": 42,
+    "someField1": "Amazon Fire HD 8",
+    "someField2": "Amazon",
+    "dt_created": "8/29/2023"
+  },
+  {
+    "id_field": 43,
+    "someField1": "Sony Ericsson Spiro",
+    "someField2": "Sony",
+    "dt_created": "8/11/2023"
+  },
+  {
+    "id_field": 44,
+    "someField1": "Nokia 2710 Navigation Edition",
+    "someField2": "Nokia",
+    "dt_created": "9/11/2023"
+  },
+  {
+    "id_field": 45,
+    "someField1": "Philips Xenium K600",
+    "someField2": "Philips",
+    "dt_created": "12/10/2023"
+  },
+  {
+    "id_field": 46,
+    "someField1": "Mitac MIO A702",
+    "someField2": "Mitac",
+    "dt_created": "8/1/2023"
+  },
+  {
+    "id_field": 47,
+    "someField1": "Intex Aqua GenX",
+    "someField2": "Intex",
+    "dt_created": "8/16/2023"
+  },
+  {
+    "id_field": 48,
+    "someField1": "Meizu MX",
+    "someField2": "Meizu",
+    "dt_created": "12/18/2023"
+  },
+  {
+    "id_field": 49,
+    "someField1": "T-Mobile HD2",
+    "someField2": "T-Mobile",
+    "dt_created": "12/19/2023"
+  },
+  {
+    "id_field": 50,
+    "someField1": "XOLO Q700s plus",
+    "someField2": "XOLO",
+    "dt_created": "11/17/2023"
+  },
+  {
+    "id_field": 51,
+    "someField1": "VK Mobile VK2020",
+    "someField2": "VK",
+    "dt_created": "1/12/2024"
+  },
+  {
+    "id_field": 52,
+    "someField1": "Motorola Moto E5 Play",
+    "someField2": "Motorola",
+    "dt_created": "10/9/2023"
+  },
+  {
+    "id_field": 53,
+    "someField1": "Vodafone 360 H2",
+    "someField2": "Vodafone",
+    "dt_created": "2/10/2024"
+  },
+  {
+    "id_field": 54,
+    "someField1": "Nokia 700",
+    "someField2": "Nokia",
+    "dt_created": "12/18/2023"
+  },
+  {
+    "id_field": 55,
+    "someField1": "Samsung Galaxy Note 3",
+    "someField2": "Samsung",
+    "dt_created": "12/24/2023"
+  },
+  {
+    "id_field": 56,
+    "someField1": "Samsung T219",
+    "someField2": "Samsung",
+    "dt_created": "3/27/2024"
+  },
+  {
+    "id_field": 57,
+    "someField1": "Realme 2 Pro",
+    "someField2": "Realme",
+    "dt_created": "7/29/2023"
+  },
+  {
+    "id_field": 58,
+    "someField1": "verykool R16",
+    "someField2": "verykool",
+    "dt_created": "8/7/2023"
+  },
+  {
+    "id_field": 59,
+    "someField1": "Lava Iris 401e",
+    "someField2": "Lava",
+    "dt_created": "12/7/2023"
+  },
+  {
+    "id_field": 60,
+    "someField1": "Coolpad 3632",
+    "someField2": "Coolpad",
+    "dt_created": "12/29/2023"
+  },
+  {
+    "id_field": 61,
+    "someField1": "LG U400",
+    "someField2": "LG",
+    "dt_created": "1/18/2024"
+  },
+  {
+    "id_field": 62,
+    "someField1": "Motorola W208",
+    "someField2": "Motorola",
+    "dt_created": "12/1/2023"
+  },
+  {
+    "id_field": 63,
+    "someField1": "HTC Desire 12",
+    "someField2": "HTC",
+    "dt_created": "1/11/2024"
+  },
+  {
+    "id_field": 64,
+    "someField1": "Asus ZenFone Live (L1) ZA550KL",
+    "someField2": "Asus",
+    "dt_created": "5/4/2024"
+  },
+  {
+    "id_field": 65,
+    "someField1": "Huawei nova 4e",
+    "someField2": "Huawei",
+    "dt_created": "5/1/2024"
+  },
+  {
+    "id_field": 66,
+    "someField1": "Emporia Care Plus",
+    "someField2": "Emporia",
+    "dt_created": "7/5/2023"
+  },
+  {
+    "id_field": 67,
+    "someField1": "Philips D813",
+    "someField2": "Philips",
+    "dt_created": "12/18/2023"
+  },
+  {
+    "id_field": 68,
+    "someField1": "Samsung Galaxy Fold 5G",
+    "someField2": "Samsung",
+    "dt_created": "11/26/2023"
+  },
+  {
+    "id_field": 69,
+    "someField1": "Realme 6 Pro",
+    "someField2": "Realme",
+    "dt_created": "4/15/2024"
+  },
+  {
+    "id_field": 70,
+    "someField1": "Yezz Andy A4.5",
+    "someField2": "Yezz",
+    "dt_created": "4/12/2024"
+  },
+  {
+    "id_field": 71,
+    "someField1": "Sagem my800X",
+    "someField2": "Sagem",
+    "dt_created": "10/7/2023"
+  },
+  {
+    "id_field": 72,
+    "someField1": "Samsung Z3 Corporate",
+    "someField2": "Samsung",
+    "dt_created": "3/29/2024"
+  },
+  {
+    "id_field": 73,
+    "someField1": "Nokia 301",
+    "someField2": "Nokia",
+    "dt_created": "8/23/2023"
+  },
+  {
+    "id_field": 74,
+    "someField1": "vivo Y81i",
+    "someField2": "vivo",
+    "dt_created": "12/27/2023"
+  },
+  {
+    "id_field": 75,
+    "someField1": "Sony Ericsson W200",
+    "someField2": "Sony",
+    "dt_created": "2/12/2024"
+  },
+  {
+    "id_field": 76,
+    "someField1": "Lenovo P70",
+    "someField2": "Lenovo",
+    "dt_created": "1/26/2024"
+  },
+  {
+    "id_field": 77,
+    "someField1": "Samsung B5702",
+    "someField2": "Samsung",
+    "dt_created": "7/18/2023"
+  },
+  {
+    "id_field": 78,
+    "someField1": "Motorola Moto G8",
+    "someField2": "Motorola",
+    "dt_created": "10/26/2023"
+  },
+  {
+    "id_field": 79,
+    "someField1": "Asus Memo Pad 10 ME103K",
+    "someField2": "Asus",
+    "dt_created": "6/24/2023"
+  },
+  {
+    "id_field": 80,
+    "someField1": "LG C1400",
+    "someField2": "LG",
+    "dt_created": "9/10/2023"
+  },
+  {
+    "id_field": 81,
+    "someField1": "Nokia 3.1 A",
+    "someField2": "Nokia",
+    "dt_created": "3/10/2024"
+  },
+  {
+    "id_field": 82,
+    "someField1": "Vodafone 360 H1",
+    "someField2": "Vodafone",
+    "dt_created": "3/22/2024"
+  },
+  {
+    "id_field": 83,
+    "someField1": "O2 XDA Serra",
+    "someField2": "O2",
+    "dt_created": "3/1/2024"
+  },
+  {
+    "id_field": 84,
+    "someField1": "HTC Desire P",
+    "someField2": "HTC",
+    "dt_created": "10/5/2023"
+  },
+  {
+    "id_field": 85,
+    "someField1": "Mitsubishi M350",
+    "someField2": "Mitsubishi",
+    "dt_created": "8/15/2023"
+  },
+  {
+    "id_field": 86,
+    "someField1": "iNQ Cloud Touch",
+    "someField2": "iNQ",
+    "dt_created": "10/3/2023"
+  },
+  {
+    "id_field": 87,
+    "someField1": "Infinix Smart HD 2021",
+    "someField2": "Infinix",
+    "dt_created": "9/7/2023"
+  },
+  {
+    "id_field": 88,
+    "someField1": "alcatel Pop 3 (5.5)",
+    "someField2": "alcatel",
+    "dt_created": "4/5/2024"
+  },
+  {
+    "id_field": 89,
+    "someField1": "BLU Slim TV",
+    "someField2": "BLU",
+    "dt_created": "9/7/2023"
+  },
+  {
+    "id_field": 90,
+    "someField1": "Asus Google Nexus 7",
+    "someField2": "Asus",
+    "dt_created": "10/15/2023"
+  },
+  {
+    "id_field": 91,
+    "someField1": "Motorola Moto 360 Sport (1st gen)",
+    "someField2": "Motorola",
+    "dt_created": "12/30/2023"
+  },
+  {
+    "id_field": 92,
+    "someField1": "Pantech Link II",
+    "someField2": "Pantech",
+    "dt_created": "6/17/2023"
+  },
+  {
+    "id_field": 93,
+    "someField1": "Micromax X410",
+    "someField2": "Micromax",
+    "dt_created": "11/14/2023"
+  },
+  {
+    "id_field": 94,
+    "someField1": "Motorola C980",
+    "someField2": "Motorola",
+    "dt_created": "10/28/2023"
+  },
+  {
+    "id_field": 95,
+    "someField1": "T-Mobile Move",
+    "someField2": "T-Mobile",
+    "dt_created": "6/28/2023"
+  },
+  {
+    "id_field": 96,
+    "someField1": "Huawei Ascend G628",
+    "someField2": "Huawei",
+    "dt_created": "9/12/2023"
+  },
+  {
+    "id_field": 97,
+    "someField1": "Haier I6",
+    "someField2": "Haier",
+    "dt_created": "12/5/2023"
+  },
+  {
+    "id_field": 98,
+    "someField1": "Samsung C3630",
+    "someField2": "Samsung",
+    "dt_created": "4/25/2024"
+  },
+  {
+    "id_field": 99,
+    "someField1": "Energizer Energy E500",
+    "someField2": "Energizer",
+    "dt_created": "9/6/2023"
+  },
+  {
+    "id_field": 100,
+    "someField1": "HTC Advantage X7510",
+    "someField2": "HTC",
+    "dt_created": "1/22/2024"
+  }
+]
