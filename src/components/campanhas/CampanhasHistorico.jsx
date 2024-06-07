@@ -32,11 +32,8 @@ const CampanhasHistorico = () => {
       setFilteredEntries(previousEntries);
     } else {
       const query = searchQuery.toLowerCase();
-      const filtered = previousEntries.filter(
-        (data) =>
-          data.cd_pasta.toLowerCase().includes(query) ||
-          data.escritorio.toLowerCase().includes(query) ||
-          data.carteira.toLowerCase().includes(query)
+      const filtered = previousEntries.filter((data) =>
+        data.cd_pasta.toLowerCase().includes(query)
       );
       setFilteredEntries(filtered);
     }
@@ -74,7 +71,8 @@ const CampanhasHistorico = () => {
         <div className="entries-container-campanhas header-row">
           <div className="section-label">ID</div>
           <div className="section-label">Pasta</div>
-          <div className="section-label">Tipo Negociação</div>
+          <div className="section-label">Nome da Campanha</div>
+
           <div className="section-label">Status</div>
           <div className="section-label">Data Início</div>
           <div className="section-label">Data Fim</div>
@@ -84,15 +82,16 @@ const CampanhasHistorico = () => {
         </div>
         {currentEntries.map((data, index) => (
           <div className="entries-container-campanhas" key={index}>
-            <div className="section-value">{data.id}</div>
+            <div className="section-value">{data.id_campaign}</div>
             <div className="section-value">{data.cd_pasta}</div>
-            <div className="section-value">{data.tipo_negociacao}</div>
+            <div className="section-value">{data.campanha_nome}</div>
+
             <div className="section-value">{data.status}</div>
             <div className="section-valie">{data.dt_vigencia_inicio}</div>
             <div className="section-value">{data.dt_vigencia_fim}</div>
             <div className="section-value">{data.dt_inclusao}</div>
             <div>
-              <Link to={`/3as-item/${data.cd_pasta}`} state={{ data }}>
+              <Link to={`/campanhas-item/${data.id_campaign}`} state={{ data }}>
                 <button className="details-button">Mais...</button>
               </Link>
             </div>

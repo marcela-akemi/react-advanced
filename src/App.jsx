@@ -50,7 +50,7 @@ const App = () => {
               element={<CampanhasHistorico />}
             />
             <Route
-              path="/campanhas-item/:cd_pasta"
+              path="/campanhas-item/:id_campaign"
               element={<CampanhasItem />}
             />
             <Route

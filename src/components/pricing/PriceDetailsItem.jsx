@@ -11,7 +11,6 @@ const PriceDetailsItem = () => {
   useEffect(() => {
     if (id_field) {
       axios
-
         .get(`http://localhost:5000/load/details/${id_field}`)
         .then((response) => {
           setItemDetails(response.data);
@@ -23,7 +22,7 @@ const PriceDetailsItem = () => {
     } else {
       console.error("ID parameter is undefined");
     }
-  }, [id_field]);
+  });
 
   if (!itemDetails) {
     return <div>Loading...</div>;
@@ -36,6 +35,8 @@ const PriceDetailsItem = () => {
         <div className="section-content-item">
           <div className="section-label-item">ID Price:</div>
           <div className="section-value-item">{itemDetails.id_field}</div>
+          <div className="section-label-item">cODIGO:</div>
+          <div className="section-value-item">{itemDetails.cd_pasta}</div>
         </div>
       </div>
       <button className="back-button" onClick={() => navigate(-1)}>

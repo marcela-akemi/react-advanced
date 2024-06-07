@@ -44,6 +44,43 @@ app.get("/load/campanhas-historico", (req, res) => {
   });
 });
 
+/**CARREGAR DETALHES DA CAMPANHA */
+app.get("/load/campanha-detalhes/:id_campaign", (req, res) => {
+  const { id_campaign } = req.params;
+
+  const filePath = path.join(
+    __dirname,
+    "../public",
+    "mockCampanhasDetailItem.json"
+  );
+  // Read mock data from file
+  fs.readFile(filePath, "utf8", (err, data) => {
+    if (err) {
+      res.status(500).json({ error: "Internal Server Error!!" });
+      return;
+    }
+
+    try {
+      const mockData = JSON.parse(data);
+      console.log("server: leitura de arquivo ok");
+      const item = mockData.filter((item) => item.id_campaign === id_campaign);
+      console.log(id_campaign);
+
+      if (item) {
+        res.json(item);
+        console.log("tem item no arquivo?");
+        console.log(item.id_campaign);
+        console.log(item.cd_pasta);
+      } else {
+        res.status(404).json({ error: "Item not found" });
+        console.log("nada foi encontrado");
+      }
+    } catch (error) {
+      res.status(500).json({ error: "Error parsing mock data" });
+    }
+  });
+});
+
 app.get("/load/3as-historico", (req, res) => {
   const filePath = path.join(__dirname, "../public", "mock3AS.json");
   fs.readFile(filePath, "utf8", (err, data) => {
@@ -145,7 +182,9 @@ app.get("/load/price-history-item", (req, res) => {
 
     const mockData = JSON.parse(data);
 
-    const filteredData = mockData.filter((item) => item.cd_pasta === cd_pasta);
+    const filteredData = mockData.filter(
+      (item) => String(item.cd_pasta) === cd_pasta
+    );
 
     const startIndex = (page - 1) * limit;
     const endIndex = page * limit;
@@ -156,6 +195,9 @@ app.get("/load/price-history-item", (req, res) => {
   });
 });
 
+/**ATENCAO. id_field NO JSON É NUMERO MAS A FUNÇÃO BUSCA POR UM INT.
+ * POR ISSO PASSEI UM STRING(...). SE 0 id_field FOR UMA STIRNG, FAVOR REMOVER.
+ */
 app.get("/load/details/:id_field", (req, res) => {
   const { id_field } = req.params;
 

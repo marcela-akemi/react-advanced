@@ -1,7 +1,8 @@
 [
   {
-    "id": "1",
+    "id_campaign": "1",
     "cd_pasta": "90023056",
+    "campanha_nome": "Resid_campaignent Evil Village",
     "tipo_negociacao": "Tipo 1",
     "status": "Ativa",
     "dt_vigencia_inicio": "2023-09-12",
@@ -9,8 +10,9 @@
     "dt_inclusao": "2024-04-18"
   },
   {
-    "id": "2",
+    "id_campaign": "2",
     "cd_pasta": "30117093",
+    "campanha_nome": "Terminator II",
     "tipo_negociacao": "Tipo 3",
     "status": "Ativa",
     "dt_vigencia_inicio": "2024-04-21",
@@ -18,8 +20,9 @@
     "dt_inclusao": "2024-03-15"
   },
   {
-    "id": "3",
+    "id_campaign": "3",
     "cd_pasta": "49134065",
+    "campanha_nome": "Alien - The 8th Passenger",
     "tipo_negociacao": "Tipo 4",
     "status": "Ativa",
     "dt_vigencia_inicio": "2024-05-27",
@@ -27,8 +30,9 @@
     "dt_inclusao": "2024-04-18"
   },
   {
-    "id": "4",
+    "id_campaign": "4",
     "cd_pasta": "10213406",
+    "campanha_nome": "Iron Man",
     "escritorio": "Stark Industries",
     "carteira": "Cajú",
     "tipo_negociacao": "Tipo 2",
@@ -38,8 +42,9 @@
     "dt_inclusao": "2024-04-18"
   },
   {
-    "id": "5",
+    "id_campaign": "5",
     "cd_pasta": "61253711",
+    "campanha_nome": "Resid_campaignent Evil: Nemesis",
     "escritorio": "Umbrella Corporation",
     "carteira": "Pinhão",
     "vl_alcada": 7223.22,
@@ -51,8 +56,9 @@
     "dt_vigencia_fim": "2024-01-20"
   },
   {
-    "id": "6",
+    "id_campaign": "6",
     "cd_pasta": "76445619",
+    "campanha_nome": "Infinite Crisis",
     "escritorio": "LexCorp",
     "carteira": "Pistaccio",
     "vl_alcada": 10313.66,
@@ -64,9 +70,10 @@
     "dt_vigencia_fim": "2024-01-20"
   },
   {
-    "id": "7",
+    "id_campaign": "7",
     "cd_pasta": "32416019",
     "escritorio": "Skynet - Artificial Intelligence Research",
+    "campanha_nome": "Terminator I",
     "carteira": "Amendoim",
     "vl_alcada": 6814.99,
     "ds_alcada": "Alçada 3",
@@ -77,9 +84,10 @@
     "dt_vigencia_fim": "2024-01-20"
   },
   {
-    "id": "8",
+    "id_campaign": "8",
     "cd_pasta": "98416619",
     "escritorio": "Vault-Tec",
+    "campanha_nome": "Fallout",
     "carteira": "Cajú",
     "vl_alcada": 2217.39,
     "ds_alcada": "Alçada 1",
@@ -90,8 +98,9 @@
     "dt_vigencia_fim": "2024-01-20"
   },
   {
-    "id": "9",
+    "id_campaign": "9",
     "cd_pasta": "22415399",
+    "campanha_nome": "Assassin's Creed",
     "escritorio": "Abstergo Industries",
     "carteira": "Pistaccio",
     "vl_alcada": 5313.66,
@@ -103,8 +112,9 @@
     "dt_vigencia_fim": "2024-01-20"
   },
   {
-    "id": "10",
+    "id_campaign": "10",
     "cd_pasta": "90241492",
+    "campanha_nome": "The Dark Knight",
     "escritorio": "Wayne Enterprises Inc.",
     "carteira": "Nozes",
     "vl_alcada": 10445.38,
@@ -116,7 +126,7 @@
     "dt_vigencia_fim": "2024-01-20"
   },
   {
-    "id": "11",
+    "id_campaign": "11",
     "cd_pasta": "8840103",
     "escritorio": "OSCORP",
     "carteira": "Cajú",
@@ -129,7 +139,7 @@
     "dt_vigencia_fim": "2024-01-20"
   },
   {
-    "id": "12",
+    "id_campaign": "12",
     "cd_pasta": "11246093",
     "escritorio": "Wayland-Yutani Corp",
     "carteira": "Pinhão",

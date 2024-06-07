@@ -1,0 +1,23 @@
+[
+  {
+    "id_campaign": "1",
+    "cd_pasta": "90029392",
+    "status": "OK",
+    "usuario": "HAL9000",
+    "dt_inclusao": "2024-02-29"
+  },
+  {
+    "id_campaign": "1",
+    "cd_pasta": "3488582",
+    "status": "OK",
+    "usuario": "R2D2",
+    "dt_inclusao": "2024-02-29"
+  },
+  {
+    "id_campaign": "1",
+    "cd_pasta": "7399302",
+    "status": "OK",
+    "usuario": "Red Queen",
+    "dt_inclusao": "2024-02-29"
+  }
+]
