@@ -103,10 +103,10 @@
 
 .search-container input {
   width: 350px;
-  padding: 5px;
+  padding: 10px;
   font-size: 14px;
   border: 1px solid #ccc;
-  border-radius: 5px;
+  border-radius: 20px;
 }
 .add-new-button {
   padding: 10px 20px;
@@ -140,4 +140,162 @@
 .page-number:hover {
   background-color: rgb(255, 111, 0);
   color: #fff;
+}
+
+/* Div Table */
+.div-table {
+  display: table;
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  border-spacing: 0 10px; /* Add space between rows */
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.div-table-row {
+  display: table-row;
+  background-color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.div-table-row:nth-child(even) {
+  background-color: #f8f8f8;
+}
+
+.div-table-row:hover {
+  background-color: #eeeeee;
+}
+
+.div-table-cell,
+.div-table-header {
+  display: table-cell;
+  padding: 10px;
+}
+
+.div-table-header {
+  background-color: #24324c;
+  color: #fff;
+  font-size: 16px;
+}
+
+.div-table-cell:first-child,
+.div-table-header:first-child {
+  border-top-left-radius: 5px;
+}
+
+.div-table-cell:last-child,
+.div-table-header:last-child {
+  border-top-right-radius: 5px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Poppins", "Work Sans", sans-serif;
+  font-weight: 200;
+  margin-top: 0;
+}
+
+body {
+  background-color: rgba(248, 248, 248, 1);
+  color: #333333;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-weight: 100;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Panel */
+.panel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.search-box {
+  flex: 1;
+}
+
+.search-box input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .container {
+    padding: 10px;
+  }
+
+  .header h1 {
+    font-size: 2em;
+  }
+
+  .button {
+    width: 100%;
+    text-align: center;
+  }
+
+  .panel {
+    flex-direction: column;
+    align-items: flex-start; /* Align items to start in column mode */
+  }
+
+  .search-box {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
+
+/* Buttons */
+.button {
+  display: inline-block;
+  padding: 8px 20px;
+  background-color: #ff6c00;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 1em;
+  font-weight: 100; /* Thin font weight */
+}
+
+.button:hover {
+  background-color: #e65c00;
+}
+
+/* Stop Button */
+.stop-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #ff0000; /* Red background */
+  color: #ffffff; /* White text */
+  border: none;
+  border-radius: 5px; /* Rounded corners */
+  font-size: 1.2em;
+  font-weight: 100; /* Thin font weight */
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.stop-button:hover {
+  background-color: #cc0000; /* Darker red on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Slightly larger shadow on hover */
+}
+
+.stop-button:active {
+  background-color: #990000; /* Even darker red on click */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Smaller shadow on click */
 }

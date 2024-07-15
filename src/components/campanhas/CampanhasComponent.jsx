@@ -3,10 +3,16 @@ import React, { useState, useRef } from "react";
 import axios from "axios";
 import { render } from "react-dom";
 import ReactDOM from "react-dom";
-
+import Papa from "papaparse";
 import "../../styles/addnew.css";
+import ReactFileReader from "react-file-reader";
+import FileUpload from "../FileUpload";
 
 const Campanhas = () => {
+  const [file, setFile] = useState(null);
+  const [loading, setLoading] = useState(false);
+  const [message, setMessage] = useState("");
+
   const [formData, setFormData] = useState({
     campanha_nome: "",
     campanha_objetivo: "",
@@ -28,7 +34,7 @@ const Campanhas = () => {
     setFormData({ ...formData, [name]: type === "checkbox" ? checked : value });
   };
 
-  const handleSubmit = async (e) => {
+  /*const handleSubmit = async (e) => {
     e.preventDefault();
 
     try {
@@ -50,46 +56,52 @@ const Campanhas = () => {
     } catch (error) {
       console.error("Erro ao salvaro dados: ", error);
     }
-  };
+  };*/
 
-  const handleFileUpload = (e) => {
-    const file = e.target.files[0];
-    if (file) {
-      const reader = new FileReader();
-      reader.onload = (event) => {
-        const csvData = event.target.result;
-        const items = csvData.split("\n").map((item) => item.trim());
-        const jsonData = items.map((row, index) => ({
-          cd_pasta: row.trim(),
-          status: 1,
-          dt_inclusao: new Date().toISOString(),
-        }));
-        setUploadedItems(jsonData);
-      };
+  const handleFiles = (event) => {
+    const file = event.target.files[0];
+    const reader = new FileReader();
 
-      reader.readAsText(file);
-    }
-  };
+    reader.onload = async (e) => {
+      const csvData = Papa.parse(e.target.result, {
+        header: true,
+        dynamicTyping: true,
+        skipEmptyLines: true,
+      });
 
-  const handleUploadSubmit = async (e) => {
-    e.preventDefault();
-    try {
-      const response = await axios.post(
-        "http://localhost:5000/save/campanhas-pastas",
-        uploadedItems
-      );
-      alert("csv lido com sucesso");
-      setUploadedItems;
-    } catch (error) {
-      console.error("erro ao consumir CSV", error);
-    }
+      const data = csvData.data.map((item) => ({
+        id_campaign_item: item.id_campaign_item,
+        id_campaign: item.id_campaign,
+        campaign_item: item.campaign_item,
+      }));
+
+      try {
+        setLoading(true);
+        const response = await axios.post(
+          `https://localhost:51388/api/Campaign/upload`,
+          csvData.data,
+          {
+            headers: {
+              "Content-Type": "application/json",
+            },
+          }
+        );
+        setMessage(response.data.message);
+      } catch (error) {
+        setMessage("Error uploading data");
+        console.error(error);
+      } finally {
+        setLoading(false);
+      }
+    };
+    reader.readAsText(file);
   };
 
   return (
     <div>
       <div className="add-entry-container">
         <h2>Adicionar nsovo registro</h2>
-        <form onSubmit={handleSubmit} className="add-entry-form">
+        <form className="add-entry-form">
           <div className="form-column">
             <div className="form-group">
               <label>Registro</label>
@@ -179,46 +191,22 @@ const Campanhas = () => {
               />
             </div>
             <div className="form-actions">
-              <button type="submit" onClick={handleSubmit}>
-                Enviar
-              </button>
+              <button type="submit">Enviar</button>
 
+              <div>
+                <h1>CSV Uploader</h1>
+                <input type="file" onChange={handleFiles} accept=".csv" />
+                <button onClick={handleFiles} disabled={loading}>
+                  {loading ? "Uploading ..." : "Upload CSV"}
+                </button>
+
+                {message && <p>{message}</p>}
+              </div>
               <button type="button">Back</button>
             </div>
+            <FileUpload />
           </div>
         </form>
-
-        {isUploadEnabled && (
-          <form onSubmit={handleUploadSubmit} className="upload-form">
-            <div className="file-upload-container">
-              <h3>Upload CSV file</h3>
-              <input
-                type="file"
-                ref={fileInuptRef}
-                accept=".csv"
-                onChange={handleFileUpload}
-              />
-              <button type="submit">Upload</button>
-            </div>
-            <div className="uploaded-data-container">
-              <h3>Uploaded items</h3>
-              <div className="uploaded-data-grid">
-                <div className="uploaded-data-header">
-                  <span>Pasta</span>
-                  <span>Status</span>
-                  <span>Data Inclusão</span>
-                </div>
-                {uploadedItems.map((item, index) => (
-                  <div className="uploaded-data-row" key={index}>
-                    <span>{item.cd_pasta}</span>
-                    <span>{item.status}</span>
-                    <span>{new Date(item.dt_inclusao).toLocaleString()}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </form>
-        )}
       </div>
     </div>
   );

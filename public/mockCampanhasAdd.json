@@ -290,5 +290,16 @@
     "isActive1": false,
     "isActive2": false,
     "isActive3": false
+  },
+  {
+    "campanha_nome": "",
+    "campanha_objetivo": "",
+    "filtro1": "",
+    "filtro2": "",
+    "data_vigencia_inicio": "",
+    "data_vigencia_termino": "",
+    "isActive1": false,
+    "isActive2": false,
+    "isActive3": false
   }
 ]

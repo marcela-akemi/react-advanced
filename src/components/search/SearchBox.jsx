@@ -29,8 +29,9 @@ const SearchBox = () => {
   };
 
   return (
-    <div className="search-box">
+    <div className="search-box-main">
       <input
+        className="input"
         type="text"
         placeholder="Pesquisar por PASTA..."
         value={searchTerm}

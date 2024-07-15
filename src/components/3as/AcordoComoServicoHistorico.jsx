@@ -59,35 +59,38 @@ const AcordoComoServicoHistorico = () => {
   return (
     <div className="previous-entries-page">
       <h1>3AS - Acordo Como Serviço</h1>
-      <div className="search-container">
-        <input
-          type="text"
-          value={searchQuery}
-          onChange={handleSearch}
-          placeholder="Pesquisar por PASTA, ESCRITORIO ou CARTEIRA"
-        ></input>
+      <div className="panel">
+        <div className="search-container">
+          <input
+            type="text"
+            value={searchQuery}
+            onChange={handleSearch}
+            placeholder="Pesquisar por PASTA, ESCRITORIO ou CARTEIRA"
+          ></input>
+        </div>
+        <button className="stop-button">Paralisar Fase 2</button>
       </div>
-      <div className="previous-entries-container">
-        <div className="entry-container header-row">
-          <div className="section-label">Pasta</div>
-          <div className="section-label">Escritório</div>
-          <div className="section-label">Carteira</div>
-          <div className="section-label">Valor Alçada</div>
-          <div className="section-label">Nível Alçada</div>
-          <div className="section-label">Data Inclusão</div>
-          <div></div>
+      <div className="div-table">
+        <div className="div-table-row">
+          <div className="div-table-header">Pasta</div>
+          <div className="div-table-header">Escritório</div>
+          <div className="div-table-header">Carteira</div>
+          <div className="div-table-header">Valor Alçada</div>
+          <div className="div-table-header">Nível Alçada</div>
+          <div className="div-table-header">Data Inclusão</div>
+          <div className="div-table-header"></div>
         </div>
         {currentEntries.map((data, index) => (
-          <div className="entry-container" key={index}>
-            <div className="section-value">{data.cd_pasta}</div>
-            <div className="section-value">{data.escritorio}</div>
-            <div className="section-value">{data.carteira}</div>
-            <div className="section-value">{data.vl_alcada}</div>
-            <div className="section-valie">{data.ds_alcada}</div>
-            <div className="section-value">{data.dt_inclusao}</div>
-            <div>
+          <div className="div-table-row" key={index}>
+            <div className="div-table-cell">{data.code_agreement}</div>
+            <div className="div-table-cell">{data.name_attorney}</div>
+            <div className="div-table-cell">{data.id_wallet}</div>
+            <div className="div-table-cell">{data.vl_alcada}</div>
+            <div className="div-table-cell">{data.ds_alcada}</div>
+            <div className="div-table-cell">{data.dt_inclusao}</div>
+            <div className="div-table-cell">
               <Link to={`/3as-item/${data.cd_pasta}`} state={{ data }}>
-                <button className="details-button">Mais...</button>
+                <button className="button">Mais...</button>
               </Link>
             </div>
           </div>
