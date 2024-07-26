@@ -10,3 +10,51 @@
     "campaign_item\r": "38486886"
   }
 ]
+
+// using Microsoft.AspNetCore.Mvc;
+// using System.Globalization;
+// using CsvHelper;
+// using CsvHelper.Configuration;
+// using System.IO;
+// using System.Threading.Tasks;
+
+// [Route("api/[controller]")]
+// [ApiController]
+// public class UploadController : ControllerBase
+// {
+//     private readonly YourDbContext _context;
+
+//     public UploadController(YourDbContext context)
+//     {
+//         _context = context;
+//     }
+
+//     [HttpPost]
+//     public async Task<IActionResult> UploadCsv([FromBody] CsvUploadRequest request)
+//     {
+//         if (string.IsNullOrEmpty(request.Content))
+//         {
+//             return BadRequest("No content provided.");
+//         }
+
+//         var config = new CsvConfiguration(CultureInfo.InvariantCulture)
+//         {
+//             Delimiter = ","
+//         };
+
+//         using (var reader = new StringReader(request.Content))
+//         using (var csv = new CsvReader(reader, config))
+//         {
+//             var records = csv.GetRecords<CsvRecord>();
+//             await _context.CsvRecords.AddRangeAsync(records);
+//             await _context.SaveChangesAsync();
+//         }
+
+//         return Ok("File content saved to database.");
+//     }
+// }
+
+// public class CsvUploadRequest
+// {
+//     public string Content { get; set; }
+// }
