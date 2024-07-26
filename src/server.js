@@ -232,6 +232,49 @@ app.get("/load/details/:id_field", (req, res) => {
   });
 });
 
+const multer = require("multer");
+const csv = require("csvtojson");
+
+const upload = multer({ dest: "uploads/" });
+
+app.post("/upload", (req, res) => {
+  const { content } = req.body;
+
+  if (!content) {
+    return res.status(400).send("nenhum conteúdo provido");
+  }
+
+  const filePath = path.join(
+    __dirname,
+    "../public",
+    "mockDataCampanhasUpload.json"
+  );
+
+  let existingData = [];
+  if (fs.existsSync(filePath)) {
+    const fileData = fs.readFileSync(filePath, "utf8");
+    existingData = JSON.parse(fileData);
+  }
+  // Parse the CSV content and convert it to JSON
+  const csvRows = content.split("\n").map((row) => row.split(","));
+  const headers = csvRows[0];
+  const jsonData = csvRows.slice(1).map((row) => {
+    let obj = {};
+    row.forEach((cell, index) => {
+      obj[headers[index]] = cell;
+    });
+    return obj;
+  });
+
+  // Append new data to existing data
+  existingData = existingData.concat(jsonData);
+
+  // Save the updated data to the JSON file
+  fs.writeFileSync(filePath, JSON.stringify(existingData, null, 2));
+
+  res.send("File content saved to JSON file.");
+});
+
 app.listen(PORT, () => {
   console.log(`servidor rodando em http://localhost:${PORT}`);
 });

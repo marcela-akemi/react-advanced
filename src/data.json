@@ -1,0 +1,27 @@
+[
+  {
+    "id_campaign_item": "1",
+    "id_campaign": "1",
+    "campaign_item": "92848676"
+  },
+  {
+    "id_campaign_item": "2",
+    "id_campaign": "1",
+    "campaign_item": "38486886"
+  },
+  {
+    "id": "8",
+    "data": "data8",
+    "flag": "1"
+  },
+  {
+    "id": "9",
+    "data": "data9",
+    "flag": "0"
+  },
+  {
+    "id": "10",
+    "data": "data10",
+    "flag": "1"
+  }
+]

@@ -191,22 +191,14 @@ const Campanhas = () => {
               />
             </div>
             <div className="form-actions">
-              <button type="submit">Enviar</button>
-
               <div>
                 <h1>CSV Uploader</h1>
-                <input type="file" onChange={handleFiles} accept=".csv" />
-                <button onClick={handleFiles} disabled={loading}>
-                  {loading ? "Uploading ..." : "Upload CSV"}
-                </button>
-
-                {message && <p>{message}</p>}
               </div>
-              <button type="button">Back</button>
             </div>
             <FileUpload />
           </div>
         </form>
+        <button type="button">Back</button>
       </div>
     </div>
   );

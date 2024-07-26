@@ -11,6 +11,7 @@
   border: 1px solid #ccc;
   border-radius: 10px 0 0 10px;
   width: 300px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
 .search-box-main button {
@@ -23,6 +24,7 @@
   cursor: pointer;
   border-radius: 0 10px 10px 0;
   transition: background-color 1.2s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
 .search-box-main button:hover {

@@ -13,8 +13,8 @@ const MajoracaoHistorico = () => {
   useEffect(() => {
     const fetchPreviousEntries = async () => {
       try {
-        const response = await axios.get(
-          "http://localhost:5000/load/majoracao-historico"
+        const response = await axios.post(
+          "https://localhost:51388/api/major/general"
         );
         setPreviousEntries(response.data);
         setFilteredEntries(response.data);
@@ -73,9 +73,9 @@ const MajoracaoHistorico = () => {
         </div>
         {currentEntries.map((data, index) => (
           <div className="entry-container" key={index}>
-            <div className="section-value">{data.cd_pasta}</div>
-            <div className="section-value">{data.vl_alcada}</div>
-            <div className="section-valie">{data.ds_alcada}</div>
+            <div className="section-value">{data.code}</div>
+            <div className="section-value">{data.value_1}</div>
+            <div className="section-valie">{data.value_category}</div>
             <div className="section-value">{data.data_majoracao}</div>
             <div>
               <Link to={`/majoracao-item/${data.cd_pasta}`} state={{ data }}>

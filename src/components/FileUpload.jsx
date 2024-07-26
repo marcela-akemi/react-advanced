@@ -1,47 +1,53 @@
-// src/components/FileUpload.js
-
 import React, { useState } from "react";
-import Papa from "papaparse";
+import axios from "axios";
 
-const FileUpload = () => {
-  const [jsonData, setJsonData] = useState(null);
+const CsvUploader = () => {
+  const [fileContent, setFileContent] = useState("");
+  const [error, setError] = useState("");
 
-  const handleFileUpload = (event) => {
-    const file = event.target.files[0];
-    if (file) {
-      Papa.parse(file, {
-        header: true,
-        complete: (results) => {
-          setJsonData(results.data);
-        },
-      });
+  const handleFileChange = (e) => {
+    const file = e.target.files[0];
+    const textType = /text.*/;
+
+    if (file.type.match(textType)) {
+      const reader = new FileReader();
+
+      reader.onload = (e) => {
+        setFileContent(reader.result);
+        setError("");
+        sendFileContentToApi(reader.result);
+      };
+
+      reader.readAsText(file);
+    } else {
+      setFileContent("");
+      setError("File not supported!");
     }
   };
 
-  const handleSubmit = async () => {
-    if (jsonData) {
-      try {
-        const response = await fetch("https://your-api-endpoint.com/endpoint", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(jsonData),
-        });
-        const result = await response.json();
-        console.log("Success:", result);
-      } catch (error) {
-        console.error("Error:", error);
-      }
+  const sendFileContentToApi = async (content) => {
+    try {
+      const response = await axios.post("http://localhost:5000/upload", {
+        content,
+      });
+      console.log("file send sucessfully", response.data);
+    } catch (error) {
+      console.error("error", error);
     }
   };
 
   return (
     <div>
-      <input type="file" accept=".csv" onChange={handleFileUpload} />
-      <button onClick={handleSubmit}>Submit</button>
+      <input type="file" id="fileInput" onChange={handleFileChange} />
+      <div id="fileDisplayArea">
+        {error ? (
+          <p style={{ color: "red" }}>{error}</p>
+        ) : (
+          <pre>{fileContent}</pre>
+        )}
+      </div>
     </div>
   );
 };
 
-export default FileUpload;
+export default CsvUploader;
